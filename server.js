@@ -43,6 +43,7 @@ app.get("/", (req, res) => {
   res.render("index", { title: "Rotten Pumpkin" });
 });
 
+//404 middleware
 app.use(function(req, res) {
   res.status(404).render("404", { title: "404" });
 });
@@ -51,3 +52,5 @@ app.use(function(req, res) {
 app.listen(process.env.PORT || 3000, () => {
   console.log(`Application is running on ${process.env.PORT || 3000}`);
 });
+
+//test branch
