@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <% include ./partials/header %>
+  </head>
+  <body style="background-color:#131a20">
+    <div id="site-content">
+      <main style="padding-top:50px" class="main-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="error-template">
+                <h1>
+                  Oops!
+                </h1>
+                <h2>
+                  404 Not Found
+                </h2>
+                <div class="error-details">
+                  Sorry, an error has occured, Requested page not found!
+                </div>
+                <div style="margin-top:10px" class="error-actions">
+                  <a href="/" class="btn btn-primary"
+                    ><span class="glyphicon glyphicon-home"></span> Take Me Home
+                  </a>
+                  <a style="margin:5px " href="/" class="btn btn-warning"
+                    ><span class="glyphicon glyphicon-envelope"></span> Contact
+                    Support
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- .container -->
+      </main>
+      <% include ./partials/footer %>
+    </div>
+  </body>
+</html>
