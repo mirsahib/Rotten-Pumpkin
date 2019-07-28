@@ -11,6 +11,9 @@
       </header>
       <main class="main-content">
         <div class="container">
+          <% if(locals.role){ %>
+          <p class="alert alert-success">Registration successful</p>
+          <% } %>
           <div class="page">
             <div class="row">
               <div class="col-md-9">

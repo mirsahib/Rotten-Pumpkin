@@ -19,13 +19,13 @@ router.post("/", (req, res) => {
   req
     .checkBody("password", "Password should be at least 4 character")
     .isLength(4);
-  req.checkBody("password_confirm", "Confirm password").notEmpty();
+  req.checkBody("password2", "Confirm Password").notEmpty();
+  req.checkBody("password2", "Password do not match").equals(req.body.password);
   const errors = req.validationErrors();
   if (errors) {
     res.render("signup", { title: "Signup", errors: errors });
   } else {
-    console.log("success");
-    res.redirect("/");
+    res.render("index", { title: "Home", role: "user" });
   }
 });
 
