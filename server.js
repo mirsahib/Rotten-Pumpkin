@@ -4,6 +4,9 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const mongo = require("mongodb");
+const expressValidator = require("express-validator");
+const session = require("express-session");
+const cookieParser = require("cookie-parser");
 
 //database setting
 var db_url =
@@ -25,8 +28,14 @@ mongo.MongoClient.connect(db_url, { useNewUrlParser: true }, function(
     db = client.db("Test");
   }
 });
+//express session,validator & cookie parser middleware
+app.use(cookieParser());
+app.use(
+  session({ secret: "mirsahib", resave: false, saveUninitialized: true })
+);
+app.use(expressValidator());
 
-//middleware
+//bodyparser middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 //setting view engine
@@ -42,6 +51,9 @@ app.get("/", (req, res) => {
   //res.locals.title = "Rotten Pumpkin";
   res.render("index", { title: "Rotten Pumpkin" });
 });
+
+//signup router
+app.use("/signup", require("./routes/signup"));
 
 //404 middleware
 app.use(function(req, res) {
