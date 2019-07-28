@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
+//this is signup routes
+
 router.get("/", (req, res) => {
   res.render("signup", { title: "Sign Up" });
 });
