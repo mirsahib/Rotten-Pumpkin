@@ -86,9 +86,25 @@ $(document).ready(function() {
       divCard.append(cardBody);
       divCol.append(divCard);
       $("#Upcomming_Movie").append(divCol);
-
-      //console.log(upImgUrl + " " + upTitle + " " + upMovId);
     }
+    //show popular movie
+    // for (let i = 0; i < 4; i++) {
+    //   var popImgUrl = "http://image.tmdb.org/t/p/w185" + popular[i].poster_path;
+    //   var popMovId = popular[i].id;
+
+    //   var divCol = $('<div class="col-sm-6 col-md-3">');
+    //   var divClass = $('<div class="latest-movie">');
+    //   var img = $(
+    //     "<a id=" +
+    //       popMovId +
+    //       ' href="#"><img style="width:100px;height:100px" src=' +
+    //       popImgUrl +
+    //       ' alt="Movie 4"/></a>'
+    //   );
+    //   divClass.append(img);
+    //   divCard.append(divClass);
+    //   $("#popular_movie").append(divCard);
+    // }
   });
 });
 
