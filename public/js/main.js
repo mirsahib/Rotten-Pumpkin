@@ -34,7 +34,9 @@ $(document).ready(function() {
       var list = $(
         '<li><a id="' +
           npMovId +
-          '" href="#"><img style = "width:800px" src="' +
+          '" href="/single/' +
+          npMovId +
+          '"><img style = "width:800px" src="' +
           npImgUrl +
           '" alt="' +
           npTitle +

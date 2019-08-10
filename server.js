@@ -58,6 +58,9 @@ app.use("/signup", require("./routes/signup"));
 //signin router
 app.use("/signin", require("./routes/signin"));
 
+//single page router
+app.use("/single", require("./routes/single"));
+
 //404 middleware
 app.use(function(req, res) {
   res.status(404).render("404", { title: "404" });
