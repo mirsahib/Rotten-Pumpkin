@@ -26,14 +26,15 @@ $(document).ready(function() {
     upComming = JSON.parse(localStorage.getItem("upcomming"));
     popular = JSON.parse(localStorage.getItem("popular"));
     //show nowPlaying
-    for (var i = 0; i < 3; i++) {
-      npImgUrl = "http://image.tmdb.org/t/p/w780" + nowPlaying[i].poster_path;
-      npTitle = nowPlaying[i].original_title;
-      npMovId = nowPlaying[i].id;
+    for (let i = 0; i < 3; i++) {
+      var npImgUrl =
+        "http://image.tmdb.org/t/p/w780" + nowPlaying[i].poster_path;
+      var npTitle = nowPlaying[i].original_title;
+      var npMovId = nowPlaying[i].id;
       var list = $(
         '<li><a id="' +
           npMovId +
-          '" href="#"><img style = "width:800px;height:720px" src="' +
+          '" href="#"><img style = "width:800px" src="' +
           npImgUrl +
           '" alt="' +
           npTitle +
@@ -48,8 +49,46 @@ $(document).ready(function() {
       prevText: '<i class="fa fa-chevron-left"></i>',
       nextText: '<i class="fa fa-chevron-right"></i>'
     });
-    var x = nowPlaying[0].genre_ids;
-    console.log(x[0]);
+    //show upcomming movie
+    for (let i = 0; i < 2; i++) {
+      var upImgUrl =
+        "http://image.tmdb.org/t/p/w185" + upComming[i].poster_path;
+      var upTitle = upComming[i].original_title;
+      var upMovId = upComming[i].id;
+      var upMovgen = upComming[i].genre_ids;
+      var upMovReleaseDate = upComming[i].release_date;
+      var divCol = $('<div class="col-sm-6 col-md-12">');
+      var divCard = $('<div class="card">');
+      var img = $('<img class="card-img-top" src="' + upImgUrl + '" />');
+      var cardBody = $('<div class="card-body">');
+      var cardTitle = $('<h3 class="card-title">' + upTitle + "</h3>");
+      var cardGenre = $('<h5 id = "genres">Genres: </h5>');
+      var text = "";
+      for (let j = 0; j < upMovgen.length; j++) {
+        let singleGenId = upMovgen[j];
+        text += genres[singleGenId] + ",";
+      }
+      cardGenre.append("<span>" + text + "</span>");
+      var cardDate = $(
+        '<h5 class="card-title"> Release Date: ' + upMovReleaseDate + "</h5>"
+      );
+
+      var cartBtn = $(
+        '<button id="' +
+          upMovId +
+          '" class="btn btn-warning cardbtn" href="#" >Details</button>'
+      );
+      divCard.append(img);
+      cardBody.append(cardTitle);
+      cardBody.append(cardGenre);
+      cardBody.append(cardDate);
+      cardBody.append(cartBtn);
+      divCard.append(cardBody);
+      divCol.append(divCard);
+      $("#Upcomming_Movie").append(divCol);
+
+      //console.log(upImgUrl + " " + upTitle + " " + upMovId);
+    }
   });
 });
 
