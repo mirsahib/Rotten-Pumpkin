@@ -12,7 +12,7 @@ router.get("/:id", (req, res) => {
   const apiUrl =
     " https://api.themoviedb.org/3/movie/" +
     id +
-    "?api_key=c438d70b1fcbf9e8f9852482df70fa5f&append_to_response=videos,credits,reviews";
+    "?api_key=c438d70b1fcbf9e8f9852482df70fa5f&append_to_response=videos,credits,reviews,similar";
 
   fetch(apiUrl)
     .then(res => res.json())
