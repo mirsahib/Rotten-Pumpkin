@@ -76,9 +76,11 @@ $(document).ready(function() {
       );
 
       var cartBtn = $(
-        '<button id="' +
+        '<a id="' +
           upMovId +
-          '" class="btn btn-warning cardbtn" href="#" >Details</button>'
+          '" class="btn btn-warning cardbtn" href="/single/' +
+          upMovId +
+          '" >Details</a>'
       );
       divCard.append(img);
       cardBody.append(cardTitle);
@@ -99,7 +101,9 @@ $(document).ready(function() {
       var img = $(
         "<a id=" +
           popMovId +
-          ' href="#"><img style="" src=' +
+          ' href="/single/' +
+          popMovId +
+          '"><img style="" src=' +
           popImgUrl +
           ' alt="Movie 4"/></a>'
       );
