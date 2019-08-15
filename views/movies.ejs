@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ./partials/movies_header -%>
+  </head>
+  <body>
+    <div id="site-content">
+      <header class="site-header">
+        <%- include ./partials/navigation -%>
+      </header>
+      <main class="main-content">
+        <div class="container">
+          <div class="page">
+            <div class="movie-list">
+              <% if(data){ %>
+                <% for(var i=0;i<data.results.length;i++){ %>
+                    <div class="movie">
+                        <figure class="movie-poster">
+                          <img src="http://image.tmdb.org/t/p/w185<%= data.results[i].poster_path %>" alt="#" />
+                        </figure>
+                        <div class="movie-title">
+                          <a href="/single/<%= data.results[i].id %>"><%= data.results[i].title %></a>
+                        </div>
+                        <p>
+                            <%= data.results[i].overview%>
+                          </p>
+                      </div>
+                  <% } %>
+                <% } %>
+              
+              <!--<div class="movie">
+                <figure class="movie-poster">
+                  <img src="dummy/thumb-4.jpg" alt="#" />
+                </figure>
+                <div class="movie-title">
+                  <a href="single.html">The adventure of Tintin</a>
+                </div>
+                <p>
+                  Sed ut perspiciatis unde omnis iste natus error voluptatem
+                  doloremque.
+                </p>
+              </div>
+              <div class="movie">
+                <figure class="movie-poster">
+                  <img src="dummy/thumb-5.jpg" alt="#" />
+                </figure>
+                <div class="movie-title"><a href="single.html">Hobbit</a></div>
+                <p>
+                  Sed ut perspiciatis unde omnis iste natus error voluptatem
+                  doloremque.
+                </p>
+              </div>
+              <div class="movie">
+                <figure class="movie-poster">
+                  <img src="dummy/thumb-6.jpg" alt="#" />
+                </figure>
+                <div class="movie-title"><a href="single.html">Exists</a></div>
+                <p>
+                  Sed ut perspiciatis unde omnis iste natus error voluptatem
+                  doloremque.
+                </p>
+              </div>
+              <div class="movie">
+                <figure class="movie-poster">
+                  <img src="dummy/thumb-1.jpg" alt="#" />
+                </figure>
+                <div class="movie-title">
+                  <a href="single.html">Drive hard</a>
+                </div>
+                <p>
+                  Sed ut perspiciatis unde omnis iste natus error voluptatem
+                  doloremque.
+                </p>
+              </div>
+              <div class="movie">
+                <figure class="movie-poster">
+                  <img src="dummy/thumb-2.jpg" alt="#" />
+                </figure>
+                <div class="movie-title"><a href="single.html">Robocop</a></div>
+                <p>
+                  Sed ut perspiciatis unde omnis iste natus error voluptatem
+                  doloremque.
+                </p>
+              </div>
+              <div class="movie">
+                <figure class="movie-poster">
+                  <img src="dummy/thumb-7.jpg" alt="#" />
+                </figure>
+                <div class="movie-title">
+                  <a href="single.html">Life of Pi</a>
+                </div>
+                <p>
+                  Sed ut perspiciatis unde omnis iste natus error voluptatem
+                  doloremque.
+                </p>
+              </div>
+              <div class="movie">
+                <figure class="movie-poster">
+                  <img src="dummy/thumb-8.jpg" alt="#" />
+                </figure>
+                <div class="movie-title">
+                  <a href="single.html">The Colony</a>
+                </div>
+                <p>
+                  Sed ut perspiciatis unde omnis iste natus error voluptatem
+                  doloremque.
+                </p>
+              </div>
+            </div>-->
+            <!-- .movie-list -->
+          </div>
+        </div>
+        <!-- .container -->
+      </main>
+      <%- include ./partials/footer -%>
+    </div>
+    <!-- Default snippet for navigation -->
+    <%- include ./partials/script -%>
+  </body>
+</html>
