@@ -10,6 +10,7 @@
 --Rotten Pumpkin recommends other movies for you to watch(functionality not implemented yet).<br>
 
 <h3>Api used:</h3>
+
 [The movie database](https://www.themoviedb.org/)
 
 **How to set up the code in your local machine**
