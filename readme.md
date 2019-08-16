@@ -1,6 +1,6 @@
 <div align="center">
 <h1>Name: Rotten Pumpkin</h1><br>
-<h3>Developed By: Mir Habib Ul Latif(ID:1510175)</h3><br>
+<h3>Developed By: Mir Habib Ul Latif (ID:1510175)</h3><br>
 </div>
 
 <h3>Introduction: </h3>
