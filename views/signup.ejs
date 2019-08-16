@@ -11,10 +11,8 @@
       </header>
       <main class="main-content">
         <div class="container">
-          <% if(locals.errors){ %> <% locals.errors.forEach(function(error){ %>
-          <p class="alert alert-danger"><%= error.msg%></p>
-          <% }) %> <%}%>
-          <form
+            <%- include ./partials/error_msg -%>
+            <form
             class="form-horizontal no-border"
             action="/signup"
             method="POST"
