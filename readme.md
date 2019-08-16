@@ -1,15 +1,15 @@
 <div align="center">
 <h1>Name: Rotten Pumpkin</h1><br>
-<h3>Developed By: Mir Habib Ul Latif</h3><br>
+<h3>Developed By: Mir Habib Ul Latif(ID:1510175)</h3><br>
 </div>
 
 <h3>Introduction: </h3>
 <br>
 --Rotten pumpkin helps to find movies you will like.<br>
 --Watch trailer and Rate movies to build a custom taste profile.<br>
---Rotten Pumpkin recommends other movies for you to watch(functionality not implemented yet).
+--Rotten Pumpkin recommends other movies for you to watch(functionality not implemented yet).<br>
 
-Api used:
+<h3>Api used:</h3>
 [The movie database](https://www.themoviedb.org/)
 
 **How to set up the code in your local machine**
@@ -24,13 +24,17 @@ Api used:
 
 
 
-3. To run the code, run the following code using correct directory:
+3. To run the code in normal mode:
 
-    `node server.js`
+    `npm run start`
 
+
+4. To run the code in development mode:
+
+    `npm run dev`
 
     
-4. In the browser open http://localhost:3000/, and you should see the index page
+5. In the browser open http://localhost:3000/, and you should see the index page
 
 
 
