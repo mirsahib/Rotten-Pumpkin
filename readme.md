@@ -1,11 +1,11 @@
-##Rotten Pumpkin
+## Rotten Pumpkin
 
-####Home page
+#### Home page
 
-####Movies page
+#### Movies page
 
-####Single page
+#### Single page
 
-####Sign up page
+#### Sign up page
 
-####Login page
+#### Login page
