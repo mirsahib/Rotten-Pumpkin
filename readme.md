@@ -3,9 +3,9 @@
 <h3>Developed By: Mir Habib Ul Latif</h3><br>
 </div>
 
-<h3Introduction: </h3>
+<h3>Introduction: </h3>
 <br>
---Rotten helps to find movies you will like.<br>
+--Rotten pumpkin helps to find movies you will like.<br>
 --Watch trailer and Rate movies to build a custom taste profile.<br>
 --Rotten Pumpkin recommends other movies for you to watch(functionality not implemented yet).
 
