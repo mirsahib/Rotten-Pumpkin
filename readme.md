@@ -9,7 +9,7 @@
 --Watch trailer and Rate movies to build a custom taste profile.<br>
 --Rotten Pumpkin recommends other movies for you to watch(functionality not implemented yet).<br>
 
-<h3>Api used:</h3>
+#### Api used:
 
 [The movie database](https://www.themoviedb.org/)
 
