@@ -17,24 +17,15 @@
       </header>
       <main class="main-content">
         <div class="container">
-          <% if(locals.errors){%> <% locals.errors.forEach(error=>{%>
-          <div
-            class="alert alert-warning alert-dismissible fade show"
-            role="alert"
+          <% if(locals.errors){ %>
+          <p class="alert alert-danger"><%= errors %></p>
+          <%}%>
+          <form
+            action="/signin"
+            method="POST"
+            style="text-align: center"
+            class="center_div form-signin"
           >
-            <%=error.msg %>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="alert"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-
-          <%})%> <% }%>
-          <form style="text-align: center" class="center_div form-signin">
             <img
               class="mb-4"
               src="/images/user.jpg"
@@ -46,6 +37,7 @@
             <label for="inputEmail" class="sr-only">Email address</label>
             <input
               type="email"
+              name="email"
               id="inputEmail"
               class="form-control"
               placeholder="Email address"
@@ -56,6 +48,7 @@
             <input
               style="margin-top:10px;margin-bottom:10px "
               type="password"
+              name="password"
               id="inputPassword"
               class="form-control"
               placeholder="Password"
