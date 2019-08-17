@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
-//this is signup routes
+const User = require("../model/user");
 
+//this is signup routes
 router.get("/", (req, res) => {
   res.render("signup", { title: "Sign Up" });
 });
@@ -12,6 +13,7 @@ router.post("/", (req, res) => {
   let pwd = req.body.password;
   let cpwd = req.body.password_confirm;
   let country = req.body.country;
+  let age = req.body.age;
   console.log(country);
   //console.log(uName, email, pwd, cpwd);
   req.checkBody("username", "Name is required").notEmpty();
@@ -29,7 +31,22 @@ router.post("/", (req, res) => {
   if (errors) {
     res.render("signup", { title: "Signup", errors: errors });
   } else {
-    res.render("index", { title: "Home", role: "user" });
+    var user = new User({
+      username: uName,
+      email: email,
+      password: pwd,
+      country: country,
+      age: age
+    });
+    user.save((err, data) => {
+      if (err) {
+        res.status(401).json({ err: err });
+      } else {
+        //this should be res.redirect
+        res.render("index", { title: "Home", role: "user" });
+        console.log(data);
+      }
+    });
   }
 });
 
