@@ -17,38 +17,36 @@
 
 1. Install [Node.js](https://nodejs.org/en/download/) on your machine.
 
-
-
-2. Download this repository, and from command prompt run the following in project directory:
+2) Download this repository, and from command prompt run the following in project directory:
 
    `npm install`
 
+3. To run the code:
 
+   `npm start`
 
-3. To run the code in normal mode:
+4) To run the code in nodemon:
 
-    `npm run start`
+   `npm run dev`
 
-
-4. To run the code in development mode:
-
-    `npm run dev`
-
-    
-5. In the browser open http://localhost:3000/, and you should see the index page
-
-
+5) In the browser open http://localhost:3000/, and you should see the index page
 
 #### Home page
+
 ![alt text](https://github.com/mirsahib/Rotten-Pumpkin/blob/master/images/index.jpeg)
+
 #### Movies page
+
 ![alt text](https://github.com/mirsahib/Rotten-Pumpkin/blob/master/images/movies.jpeg)
 
 #### Single page
+
 ![alt text](https://github.com/mirsahib/Rotten-Pumpkin/blob/master/images/single.jpeg)
 
 #### Sign up page
+
 ![alt text](https://github.com/mirsahib/Rotten-Pumpkin/blob/master/images/signup.png)
 
 #### Login page
+
 ![alt text](https://github.com/mirsahib/Rotten-Pumpkin/blob/master/images/login.png)
