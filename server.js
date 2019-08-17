@@ -62,6 +62,10 @@ app.use("/signin", require("./routes/signin"));
 app.use("/single", require("./routes/single"));
 //movies page router
 app.use("/movies", require("./routes/movies"));
+//dashboard page router
+app.use("/dashboard", require("./routes/dashboard"));
+//recommendation page router
+app.use("/recommendation", require("./routes/recommendation"));
 
 //404 middleware
 app.use(function(req, res) {
