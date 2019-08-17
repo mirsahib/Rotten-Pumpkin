@@ -13,6 +13,14 @@
 
 [The movie database](https://www.themoviedb.org/)
 
+### Apha branch: <br>
+
+The work need to be done
+
+1. Authentication
+2. Defining user session
+3. Build a local recommendation system
+
 **How to set up the code in your local machine**
 
 1. Install [Node.js](https://nodejs.org/en/download/) on your machine.
