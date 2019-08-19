@@ -19,7 +19,7 @@ contain the full demo presented in class(18 Aug 2019)
 
 #### master branch
 
-contain the modification which are not done in alpha branch
+contain the modification which are not done in alpha branch.<br>
 modification made after(18 Aug 2019):
 
 1. password is encrypted
