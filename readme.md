@@ -13,7 +13,17 @@
 
 [The movie database](https://www.themoviedb.org/)
 
-#### Check alpha branch for full demo
+#### Alpha branch
+
+contain the full demo presented in class(18 Aug 2019)
+
+#### master branch
+
+contain the modification which are not done in alpha branch
+modification made after(18 Aug 2019):
+
+1. password is encrypted
+2. user validation: check if email already exist in the database
 
 **How to set up the code in your local machine**
 
