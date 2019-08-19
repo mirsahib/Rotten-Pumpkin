@@ -10,25 +10,16 @@ const session = require("express-session");
 const cookieParser = require("cookie-parser");
 
 //database setting
-var db_url =
-  "mongodb+srv://mirsahib24:admin123@test-ry7bt.mongodb.net/rotten-pumpkin?retryWrites=true&w=majority";
-mongoose.connect(db_url, { useNewUrlParser: true });
+const db = require("./config/keys").mongoURI;
+mongoose
+  .connect(db, { useNewUrlParser: true })
+  .then(() => {
+    console.log("Mongodb Connected");
+  })
+  .catch(err => {
+    console.log(err);
+  });
 
-mongoose.connection.on("error", function(err) {
-  console.log(err);
-  console.log("Could not connect to mongodb");
-});
-
-mongo.MongoClient.connect(db_url, { useNewUrlParser: true }, function(
-  err,
-  client
-) {
-  if (err) {
-    console.log("Could Not Connect DB");
-  } else {
-    db = client.db("Test");
-  }
-});
 //express session,validator & cookie parser middleware
 app.use(cookieParser());
 app.use(
