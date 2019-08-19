@@ -12,6 +12,7 @@
   "author": "Mir Sahib",
   "license": "ISC",
   "dependencies": {
+    "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.4",
     "ejs": "^2.6.2",
     "express": "^4.17.1",

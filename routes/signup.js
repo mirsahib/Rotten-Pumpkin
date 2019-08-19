@@ -29,7 +29,9 @@ router.post("/", (req, res) => {
   if (errors) {
     res.render("signup", { title: "Signup", errors: errors });
   } else {
-    res.render("index", { title: "Home", role: "user" });
+    req.flash("success_msg", "Registration Successful");
+    res.redirect("/");
+    //res.render("index", { title: "Home", role: "user" });
   }
 });
 

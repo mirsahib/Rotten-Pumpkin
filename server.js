@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const mongo = require("mongodb");
 const expressValidator = require("express-validator");
+const flash = require("connect-flash");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
 
@@ -45,6 +46,17 @@ app.set("view engine", "ejs");
 
 //setting static folder
 app.use(express.static(path.join(__dirname, "public")));
+
+// Connect flash
+app.use(flash());
+
+// Global variables
+app.use(function(req, res, next) {
+  res.locals.success_msg = req.flash("success_msg");
+  res.locals.error_msg = req.flash("error_msg");
+  res.locals.error = req.flash("error");
+  next();
+});
 
 //load landing page
 app.get("/", (req, res) => {
