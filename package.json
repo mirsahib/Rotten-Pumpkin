@@ -12,6 +12,7 @@
   "author": "Mir Sahib",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^3.0.6",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.4",
     "ejs": "^2.6.2",
@@ -20,7 +21,9 @@
     "express-validator": "^5.3.1",
     "mongodb": "^3.3.0-beta2",
     "mongoose": "^5.6.6",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "ejs-lint": "^0.3.0",
