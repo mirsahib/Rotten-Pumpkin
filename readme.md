@@ -13,7 +13,7 @@
 
 [The movie database](https://www.themoviedb.org/)
 
-#### Check aplha branch for full demo
+#### Check alpha branch for full demo
 
 **How to set up the code in your local machine**
 
