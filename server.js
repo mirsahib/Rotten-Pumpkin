@@ -3,7 +3,6 @@ const app = express();
 const path = require("path");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const mongo = require("mongodb");
 const expressValidator = require("express-validator");
 const flash = require("connect-flash");
 const session = require("express-session");
